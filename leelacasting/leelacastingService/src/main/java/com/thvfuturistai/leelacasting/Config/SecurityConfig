@@ -1,0 +1,15 @@
+package com.thvfuturistai.leelacasting.Config;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+        return http.authorizeHttpRequests( auth -> auth.requestMatchers("/").permitAll().requestMatchers("/login").permitAll().anyRequest().authenticated()
+        ).csrf(csrf -> csrf.disable())
+        .httpBasic(basic -> basic.disable())
+        .sessionManagement(session -> session.sessionCreationPolicy(
+            sessionCreationPolicy.STATELESS
+        )).build();
+    }
+}
