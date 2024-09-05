@@ -7,4 +7,5 @@ public interface DailyTransactionsDAO extends IDAO<DailyTransactions,Long >{
 
 	String test(String inputLogin);
 
+
 }

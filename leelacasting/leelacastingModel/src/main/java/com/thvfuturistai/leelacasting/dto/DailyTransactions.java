@@ -10,6 +10,6 @@ import com.thvfuturistai.leelacasting.domain.BaseDailyTransactions;
 
 @SuppressWarnings({ "serial"})
 @Entity 
-@Table (name="DAILYTRANSACTIONS")
+@Table (name="dailytransactions")
 public class DailyTransactions extends BaseDailyTransactions{
 }
