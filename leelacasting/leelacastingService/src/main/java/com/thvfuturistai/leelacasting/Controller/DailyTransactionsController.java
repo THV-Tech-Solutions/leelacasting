@@ -44,7 +44,7 @@ public class DailyTransactionsController {
 		}
 
 	    @GetMapping("/getTodaysRecords")
-		public ResponseEntity<Response<DailyTransactions>> getTodaysRecords(@RequestParam String inputLogin) {
+		public ResponseEntity<Response<DailyTransactions>> getTodaysRecords(@RequestParam Long inputLogin) {
 			try {
 				LOGGER.info("Fetch todays record Start");
 				DailyTransactions LoginResponse = dailyTransactionsService.getTodaysRecords(inputLogin);

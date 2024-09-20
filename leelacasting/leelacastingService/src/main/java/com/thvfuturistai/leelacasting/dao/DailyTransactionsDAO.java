@@ -1,11 +1,9 @@
-package com.thvfuturistai.leelacasting.dao; 
+package com.thvfuturistai.leelacasting.dao;
 
-import com.thvfuturistai.leelacasting.Core.IDAO;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import com.thvfuturistai.leelacasting.dto.DailyTransactions;
 
-public interface DailyTransactionsDAO extends IDAO<DailyTransactions,Long >{
-
-	String test(String inputLogin);
-
+public interface DailyTransactionsDAO extends JpaRepository<DailyTransactions, Long> {
 
 }
